@@ -8,7 +8,12 @@ Course: BMIS 235 - HTML-3
 <head>
 <meta charset="utf-8">
 <meta name="author" content="Kyle Kavon">
-<title>Kyle Kavon</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Kyle Kavon · Portfolio</title>
+
+<!-- fonts: Bebas Neue for headlines, Inter for body text -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;600;700&display=swap">
 
 <!-- this one line connects the page to the stylesheet -->
 <link rel="stylesheet" href="styles.css">
@@ -17,65 +22,105 @@ Course: BMIS 235 - HTML-3
 
 <nav>
 <a href="index.html"><img src="img/home.png" alt="Home"></a>
-<a href="about.html"><img src="img/about.png" alt="About"></a>
-<a href="projects.html"><img src="img/projects.png" alt="Projects"></a>
+<a href="design.html"><img src="img/design.png" alt="Design"></a>
+<a href="photography.html"><img src="img/photo.png" alt="Photo"></a>
 <a href="contact.html"><img src="img/contact.png" alt="Contact"></a>
 </nav>
 
-<h1>Kyle Kavon</h1>
-<p>Hey, I'm Kyle, a student at Gonzaga University in Spokane with a minor in Sport Management. I'm working toward a career in sales, and this site is where I keep what I've worked on and what I'm about.</p>
-<p>Look around to learn more about me, check out the projects I've been part of, or reach out if you want to talk.</p>
+<div class="hero">
+<div class="eyebrow">Business &middot; Sports &middot; Design &middot; Photography</div>
+<h1>Kyle <span class="gradient">Kavon</span></h1>
+<p class="lead">Business Administration student at Gonzaga University. I like building things, telling stories with a camera, and figuring out what makes people say yes.</p>
+<ul class="tags">
+<li>Business Administration</li>
+<li>Communication Studies minor</li>
+<li>Sport Management minor</li>
+<li>Leadership Studies minor &middot; CLP</li>
+</ul>
+<div class="cta">
+<a href="design.html">See my design work</a>
+<a class="alt" href="photography.html">See my photography</a>
+</div>
+</div>
 
+<h2>About me</h2>
+<p>I'm a Business Administration major at Gonzaga in Spokane, with minors in Communication Studies, Sport Management, and Leadership Studies through the Comprehensive Leadership Program. I'm working toward a career in sales, and when I'm not doing that I'm usually designing something or out shooting photos, so this site is half resume, half portfolio.</p>
+
+<h2>Experience</h2>
+<div class="cards">
+<div class="card">
+<div class="role">Consultant &middot; Fall 2026</div>
+<h3>Gonzaga Sport Consulting Group</h3>
+<p>Part of the GSCG team that worked on a project for the <a href="https://sky.wnba.com">Chicago Sky</a>. I handled the asset audit and researched sponsorship categories like tech and AI, fintech, and Spanish-language radio.</p>
+</div>
+<div class="card">
+<div class="role">Member &middot; Freshman year</div>
+<h3>Zeta Beta Tau</h3>
+<p>ZBT is where I first got into AI my freshman year, and I've been building with it ever since.</p>
+</div>
+<div class="card">
+<div class="role">Comprehensive Leadership Program</div>
+<h3>Leadership Studies</h3>
+<p>Through CLP I'm working on how to lead people and teams, not just manage tasks.</p>
+</div>
+</div>
+
+<h2>What I bring</h2>
 <!-- Part 7: interactive graphic goes inside this box -->
 <div class="showcase">
 <!-- HTML: four cards, the front shows a strength and the back shows the proof -->
 <div class="kk">
-  <div class="kk-title">What I bring (click a card)</div>
+  <div class="kk-title">Click a card to flip it</div>
   <div class="kk-grid">
-    <button class="kk-card" type="button"><span class="kk-inner"><span class="kk-front">Team Player</span><span class="kk-back">Worked on a Gonzaga Sport Consulting Group team project for the Chicago Sky.</span></span></button>
-    <button class="kk-card" type="button"><span class="kk-inner"><span class="kk-front">Builder</span><span class="kk-back">Designing Gear Cage, an app for running athletic equipment rooms.</span></span></button>
-    <button class="kk-card" type="button"><span class="kk-inner"><span class="kk-front">Disciplined</span><span class="kk-back">I stick to a weekly lifting and cardio plan and invest every month.</span></span></button>
-    <button class="kk-card" type="button"><span class="kk-inner"><span class="kk-front">Creative</span><span class="kk-back">I edit sports photos in Lightroom for fun.</span></span></button>
+    <button class="kk-card" type="button"><span class="kk-inner"><span class="kk-front">Team Player</span><span class="kk-back">Part of the Gonzaga Sport Consulting Group team that worked with the Chicago Sky.</span></span></button>
+    <button class="kk-card" type="button"><span class="kk-inner"><span class="kk-front">AI Curious</span><span class="kk-back">Got into AI through ZBT my freshman year and haven't stopped since.</span></span></button>
+    <button class="kk-card" type="button"><span class="kk-inner"><span class="kk-front">Designer</span><span class="kk-back">Posters, social graphics and branding. See the Design page.</span></span></button>
+    <button class="kk-card" type="button"><span class="kk-inner"><span class="kk-front">Photographer</span><span class="kk-back">Sports photos edited in Lightroom. See the Photography page.</span></span></button>
   </div>
 </div>
 
-<!-- CSS: navy and red cards that flip in 3D, every rule starts with .showcase -->
+<!-- CSS: dark cards with a teal to orange edge that flip in 3D, every rule starts with .showcase -->
 <style>
 .showcase {
-  max-width: 600px;
-  margin: 30px auto;
+  max-width: 1000px;
+  margin: 0 auto;
 }
 .showcase .kk {
-  font-family: Verdana, Geneva, sans-serif;
+  font-family: "Inter", "Helvetica Neue", Arial, sans-serif;
   text-align: center;
 }
 .showcase .kk-title {
-  color: #041e42;
-  font-size: 20px;
-  font-weight: bold;
-  margin-bottom: 14px;
+  color: #1fb5ac;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  margin-bottom: 16px;
 }
 .showcase .kk-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 14px;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 16px;
 }
 .showcase .kk-card {
-  height: 150px;
+  height: 170px;
   padding: 0;
   border: none;
   background: none;
   cursor: pointer;
-  perspective: 800px;
-  font-family: Verdana, Geneva, sans-serif;
+  perspective: 900px;
+  font-family: "Inter", "Helvetica Neue", Arial, sans-serif;
 }
 .showcase .kk-inner {
   position: relative;
   display: block;
   width: 100%;
   height: 100%;
-  transition: transform 0.5s;
+  transition: transform 0.6s;
   transform-style: preserve-3d;
+}
+.showcase .kk-card:hover .kk-inner {
+  transform: rotateY(12deg);
 }
 .showcase .kk-card.kk-flipped .kk-inner {
   transform: rotateY(180deg);
@@ -91,23 +136,25 @@ Course: BMIS 235 - HTML-3
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 12px;
-  border-radius: 12px;
-  border: 3px solid #c8102e;
+  padding: 18px;
+  border-radius: 18px;
   backface-visibility: hidden;
   -webkit-backface-visibility: hidden;
 }
 .showcase .kk-front {
-  background-color: #041e42;
-  color: #ffffff;
-  font-size: 20px;
-  font-weight: bold;
+  background-color: #161618;
+  border: 2px solid #1fb5ac;
+  color: #ecebe6;
+  font-family: "Bebas Neue", Impact, sans-serif;
+  font-size: 34px;
+  letter-spacing: 1px;
 }
 .showcase .kk-back {
-  background-color: #ffffff;
-  color: #041e42;
-  font-size: 13px;
-  line-height: 1.4;
+  background: linear-gradient(135deg, #1fb5ac, #ff6b2c);
+  color: #0d0d0f;
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 1.45;
   transform: rotateY(180deg);
 }
 </style>
