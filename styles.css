@@ -1,64 +1,327 @@
 /* =====================================================================
-styles.css · Kyle Kavon (kkavon) · Gonzaga navy, red and Verdana
+styles.css · Kyle Kavon (kkavon) · Portfolio brand
 ---------------------------------------------------------------------
-This one file is your brand guide. Every page that links to it gets
-the same font, the same colors and the same spacing.
-Change a color here once, and every page changes.
-
-Use the same font and colors you picked for your Excel menu images,
-so the menu and the pages look like one brand.
+Dark background, Bebas Neue headlines, Inter body text, and teal
+and orange accents (the same split-tone I use in my photo edits).
+Every page links to this one file, so the whole site stays on brand.
 ===================================================================== */
 
 body {
-font-family: Verdana, Geneva, sans-serif;
-background-color: #f5f7fa;
-color: #2b2b2b;
+font-family: "Inter", "Helvetica Neue", Arial, sans-serif;
+background-color: #0d0d0f;
+background-image: radial-gradient(circle at 10% 0%, rgba(31, 181, 172, 0.18), transparent 40%),
+                  radial-gradient(circle at 95% 25%, rgba(255, 107, 44, 0.14), transparent 35%);
+background-attachment: fixed;
+color: #ecebe6;
 margin: 0;
 padding: 0 20px 40px 20px;
 }
 
-/* the menu at the top of every page */
+/* the menu sticks to the top and blurs whatever scrolls under it */
 nav {
-background-color: #041e42;
+position: sticky;
+top: 0;
+z-index: 10;
+background-color: rgba(13, 13, 15, 0.8);
+backdrop-filter: blur(10px);
+-webkit-backdrop-filter: blur(10px);
+border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+margin: 0 -20px;
 padding: 14px;
 text-align: center;
 }
 
-/* every image inside the menu is forced to the same height.
-If your images still look different sizes, their WIDTHS are
-different: go back to Excel and make every cell the same size. */
+/* every menu image is the same height, with soft corners */
 nav img {
-height: 50px;
+height: 44px;
 margin: 4px;
 vertical-align: middle;
+border-radius: 8px;
 }
 
-/* no underline or border around the image links */
 nav a {
 text-decoration: none;
 }
 
 h1 {
-color: #041e42;
+font-family: "Bebas Neue", Impact, sans-serif;
+font-weight: 400;
+color: #ecebe6;
 text-align: center;
-font-size: 40px;
+font-size: 96px;
+line-height: 0.95;
+letter-spacing: 2px;
+margin: 10px auto 10px auto;
+}
+
+h2 {
+font-family: "Bebas Neue", Impact, sans-serif;
+font-weight: 400;
+font-size: 44px;
+letter-spacing: 1px;
+color: #ecebe6;
+text-align: center;
+max-width: 1000px;
+margin: 70px auto 20px auto;
 }
 
 p {
-max-width: 600px;
-margin: 20px auto;
+max-width: 640px;
+margin: 18px auto;
 font-size: 18px;
-line-height: 1.5;
+line-height: 1.6;
+color: #c9c8c2;
 }
 
 footer {
 text-align: center;
 font-size: 14px;
-color: #777777;
-margin-top: 40px;
+color: #77766f;
+margin-top: 70px;
 }
 
-/* menu buttons lift up when you hover */
+/* ===== HERO ============================================================ */
+
+.hero {
+padding: 70px 0 20px 0;
+}
+
+/* small label above each page title */
+.eyebrow {
+text-align: center;
+text-transform: uppercase;
+letter-spacing: 4px;
+font-size: 13px;
+font-weight: 700;
+color: #1fb5ac;
+}
+
+/* teal to orange text */
+.gradient {
+background: linear-gradient(90deg, #1fb5ac, #ff6b2c);
+-webkit-background-clip: text;
+background-clip: text;
+color: transparent;
+}
+
+.lead {
+text-align: center;
+font-size: 21px;
+color: #ecebe6;
+}
+
+/* pill tags for majors and minors */
+.tags {
+display: flex;
+flex-wrap: wrap;
+justify-content: center;
+gap: 10px;
+max-width: 820px;
+margin: 26px auto;
+padding: 0;
+list-style: none;
+}
+
+.tags li {
+border: 1px solid rgba(255, 255, 255, 0.18);
+border-radius: 999px;
+padding: 8px 16px;
+font-size: 14px;
+transition: border-color 0.2s, color 0.2s;
+}
+
+.tags li:hover {
+border-color: #1fb5ac;
+color: #1fb5ac;
+}
+
+/* big pill buttons */
+.cta {
+text-align: center;
+margin: 34px auto;
+}
+
+.cta a {
+display: inline-block;
+margin: 6px;
+padding: 14px 28px;
+border-radius: 999px;
+background-color: #1fb5ac;
+color: #0d0d0f;
+font-weight: 700;
+font-size: 14px;
+letter-spacing: 1px;
+text-transform: uppercase;
+text-decoration: none;
+transition: background-color 0.2s, transform 0.2s;
+}
+
+.cta a.alt {
+background-color: transparent;
+color: #ecebe6;
+border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.cta a:hover {
+background-color: #ff6b2c;
+color: #0d0d0f;
+transform: translateY(-2px);
+}
+
+/* ===== EXPERIENCE CARDS ================================================ */
+
+.cards {
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+gap: 20px;
+max-width: 1000px;
+margin: 0 auto;
+}
+
+.card {
+background-color: rgba(255, 255, 255, 0.04);
+border: 1px solid rgba(255, 255, 255, 0.08);
+border-radius: 18px;
+padding: 26px;
+transition: transform 0.25s, border-color 0.25s;
+}
+
+.card:hover {
+transform: translateY(-6px);
+border-color: #ff6b2c;
+}
+
+.card h3 {
+font-family: "Bebas Neue", Impact, sans-serif;
+font-weight: 400;
+font-size: 30px;
+letter-spacing: 1px;
+margin: 6px 0;
+color: #ecebe6;
+}
+
+.card .role {
+color: #1fb5ac;
+font-size: 12px;
+font-weight: 700;
+letter-spacing: 2px;
+text-transform: uppercase;
+}
+
+.card p {
+margin: 10px 0 0 0;
+font-size: 16px;
+}
+
+/* ===== GALLERIES ======================================================= */
+
+/* design page: even grid */
+.gallery {
+display: grid;
+grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+gap: 16px;
+max-width: 1100px;
+margin: 30px auto;
+}
+
+/* photo page: staggered columns */
+.masonry {
+columns: 3 280px;
+column-gap: 16px;
+max-width: 1100px;
+margin: 30px auto;
+}
+
+.masonry .tile {
+display: block;
+break-inside: avoid;
+margin-bottom: 16px;
+}
+
+/* one piece of work. Until an image is uploaded it shows a placeholder */
+.tile {
+position: relative;
+margin: 0;
+aspect-ratio: 4 / 3;
+border-radius: 16px;
+overflow: hidden;
+background: linear-gradient(135deg, rgba(31, 181, 172, 0.25), rgba(255, 107, 44, 0.25));
+}
+
+.tile.tall {
+aspect-ratio: 3 / 4;
+}
+
+.tile::before {
+content: "Your work goes here";
+position: absolute;
+top: 0;
+left: 0;
+right: 0;
+bottom: 0;
+display: flex;
+align-items: center;
+justify-content: center;
+color: rgba(255, 255, 255, 0.55);
+font-size: 13px;
+letter-spacing: 3px;
+text-transform: uppercase;
+}
+
+.tile img {
+position: relative;
+z-index: 1;
+display: block;
+width: 100%;
+height: 100%;
+object-fit: cover;
+transition: transform 0.5s;
+}
+
+.tile:hover img {
+transform: scale(1.06);
+}
+
+/* caption slides up when you hover */
+.tile figcaption {
+position: absolute;
+left: 0;
+right: 0;
+bottom: 0;
+z-index: 2;
+padding: 18px;
+background: linear-gradient(transparent, rgba(0, 0, 0, 0.85));
+font-size: 14px;
+color: #ecebe6;
+transform: translateY(100%);
+transition: transform 0.3s;
+}
+
+.tile:hover figcaption {
+transform: translateY(0);
+}
+
+.tile figcaption b {
+display: block;
+font-family: "Bebas Neue", Impact, sans-serif;
+font-weight: 400;
+font-size: 24px;
+letter-spacing: 1px;
+}
+
+/* smaller headlines on phones */
+@media (max-width: 600px) {
+h1 {
+font-size: 60px;
+}
+.tile figcaption {
+transform: translateY(0);
+}
+}
+
+/* ===== MY 3 STYLES ===================================================== */
+
+/* 1. menu buttons lift up when you hover */
 nav img {
   transition: transform 0.2s;
 }
@@ -66,19 +329,22 @@ nav img:hover {
   transform: translateY(-3px) scale(1.05);
 }
 
-/* links in paragraphs are navy and turn red on hover */
+/* 2. links in paragraphs are teal and turn orange on hover */
 p a {
-  color: #041e42;
+  color: #1fb5ac;
   font-weight: bold;
 }
 p a:hover {
-  color: #c8102e;
+  color: #ff6b2c;
 }
 
-/* red line under every page heading */
-h1 {
-  max-width: 600px;
-  margin: 30px auto;
-  padding-bottom: 10px;
-  border-bottom: 4px solid #c8102e;
+/* 3. teal to orange accent bar under every page heading */
+h1::after {
+  content: "";
+  display: block;
+  width: 90px;
+  height: 5px;
+  margin: 22px auto 0 auto;
+  border-radius: 5px;
+  background: linear-gradient(90deg, #1fb5ac, #ff6b2c);
 }
