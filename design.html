@@ -8,22 +8,60 @@ Course: BMIS 235 - HTML-3
 <head>
 <meta charset="utf-8">
 <meta name="author" content="Kyle Kavon">
-<title>About · Kyle Kavon</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Graphic Design · Kyle Kavon</title>
+
+<!-- fonts: Bebas Neue for headlines, Inter for body text -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;600;700&display=swap">
+
+<!-- this one line connects the page to the stylesheet -->
 <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
 <nav>
 <a href="index.html"><img src="img/home.png" alt="Home"></a>
-<a href="about.html"><img src="img/about.png" alt="About"></a>
-<a href="projects.html"><img src="img/projects.png" alt="Projects"></a>
+<a href="design.html"><img src="img/design.png" alt="Design"></a>
+<a href="photography.html"><img src="img/photo.png" alt="Photo"></a>
 <a href="contact.html"><img src="img/contact.png" alt="Contact"></a>
 </nav>
 
-<h1>About Me</h1>
-<p><b>School.</b> I'm at Gonzaga University studying business, with a Sport Management minor, and I've taken classes in accounting, economics, leadership and communication research.</p>
-<p><b>Where I'm headed.</b> I want to work in sales. I'm interested in medical sales and insurance, and I like the idea of a job where how hard you work shows up in your results.</p>
-<p><b>Outside of class.</b> I'm in the gym most of the week on a lifting and cardio plan, I edit sports photos in Lightroom, and I invest a little every month for the long run.</p>
+<div class="hero">
+<div class="eyebrow">Portfolio &middot; 01</div>
+<h1>Graphic <span class="gradient">Design</span></h1>
+<p class="lead">Posters, social graphics, and branding work. Hover over a piece to see what it was for.</p>
+</div>
+
+<!-- To add your work: upload images named design1.jpg through design6.jpg
+     into the img folder. Each one shows up in its box automatically.
+     Then change the title and description in its figcaption. -->
+<div class="gallery">
+<figure class="tile">
+<img src="img/design1.jpg" alt="Design 1" onerror="this.style.display='none'">
+<figcaption><b>Design 1</b>Add a short description of this piece.</figcaption>
+</figure>
+<figure class="tile">
+<img src="img/design2.jpg" alt="Design 2" onerror="this.style.display='none'">
+<figcaption><b>Design 2</b>Add a short description of this piece.</figcaption>
+</figure>
+<figure class="tile">
+<img src="img/design3.jpg" alt="Design 3" onerror="this.style.display='none'">
+<figcaption><b>Design 3</b>Add a short description of this piece.</figcaption>
+</figure>
+<figure class="tile">
+<img src="img/design4.jpg" alt="Design 4" onerror="this.style.display='none'">
+<figcaption><b>Design 4</b>Add a short description of this piece.</figcaption>
+</figure>
+<figure class="tile">
+<img src="img/design5.jpg" alt="Design 5" onerror="this.style.display='none'">
+<figcaption><b>Design 5</b>Add a short description of this piece.</figcaption>
+</figure>
+<figure class="tile">
+<img src="img/design6.jpg" alt="Design 6" onerror="this.style.display='none'">
+<figcaption><b>Design 6</b>Add a short description of this piece.</figcaption>
+</figure>
+</div>
 
 <footer>Built by Kyle Kavon &middot; BMIS 235</footer>
 
