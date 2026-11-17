@@ -65,3 +65,12 @@ nav img {
 nav img:hover {
   transform: translateY(-3px) scale(1.05);
 }
+
+/* links in paragraphs are navy and turn red on hover */
+p a {
+  color: #041e42;
+  font-weight: bold;
+}
+p a:hover {
+  color: #c8102e;
+}
