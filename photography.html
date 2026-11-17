@@ -8,23 +8,60 @@ Course: BMIS 235 - HTML-3
 <head>
 <meta charset="utf-8">
 <meta name="author" content="Kyle Kavon">
-<title>Projects · Kyle Kavon</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Photography · Kyle Kavon</title>
+
+<!-- fonts: Bebas Neue for headlines, Inter for body text -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;600;700&display=swap">
+
+<!-- this one line connects the page to the stylesheet -->
 <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
 <nav>
 <a href="index.html"><img src="img/home.png" alt="Home"></a>
-<a href="about.html"><img src="img/about.png" alt="About"></a>
-<a href="projects.html"><img src="img/projects.png" alt="Projects"></a>
+<a href="design.html"><img src="img/design.png" alt="Design"></a>
+<a href="photography.html"><img src="img/photo.png" alt="Photo"></a>
 <a href="contact.html"><img src="img/contact.png" alt="Contact"></a>
 </nav>
 
-<h1>Projects</h1>
-<p><b>Chicago Sky consulting project.</b> On the Gonzaga Sport Consulting Group, I worked on a Fall 2026 project for the <a href="https://sky.wnba.com">Chicago Sky</a>. I ran the asset audit with a teammate and researched sponsorship categories, including tech and AI, fintech and Spanish-language radio, then presented it at our midpoint presentation.</p>
-<p><b>Gear Cage.</b> I'm designing an app for college and high school athletic equipment rooms. It handles inventory, checkouts, athlete profiles, and ordering on a budget, so staff always know where everything is.</p>
-<p><b>Entrepreneur interview.</b> My group interviewed entrepreneur Tyler Lafferty and turned what we learned into a Jeopardy-style game show presentation for the class.</p>
-<p><b>This website.</b> Built by hand on GitHub Pages with HTML and CSS, with menu buttons I made in Excel.</p>
+<div class="hero">
+<div class="eyebrow">Portfolio &middot; 02</div>
+<h1>Photo<span class="gradient">graphy</span></h1>
+<p class="lead">Mostly sports. I edit everything in Lightroom, usually going for either a bright, faded look or a moodier teal and orange editorial style.</p>
+</div>
+
+<!-- To add your work: upload images named photo1.jpg through photo6.jpg
+     into the img folder. Each one shows up in its box automatically.
+     Then change the title and description in its figcaption. -->
+<div class="masonry">
+<figure class="tile tall">
+<img src="img/photo1.jpg" alt="Photo 1" onerror="this.style.display='none'">
+<figcaption><b>Photo 1</b>Add a short description of this piece.</figcaption>
+</figure>
+<figure class="tile">
+<img src="img/photo2.jpg" alt="Photo 2" onerror="this.style.display='none'">
+<figcaption><b>Photo 2</b>Add a short description of this piece.</figcaption>
+</figure>
+<figure class="tile">
+<img src="img/photo3.jpg" alt="Photo 3" onerror="this.style.display='none'">
+<figcaption><b>Photo 3</b>Add a short description of this piece.</figcaption>
+</figure>
+<figure class="tile tall">
+<img src="img/photo4.jpg" alt="Photo 4" onerror="this.style.display='none'">
+<figcaption><b>Photo 4</b>Add a short description of this piece.</figcaption>
+</figure>
+<figure class="tile tall">
+<img src="img/photo5.jpg" alt="Photo 5" onerror="this.style.display='none'">
+<figcaption><b>Photo 5</b>Add a short description of this piece.</figcaption>
+</figure>
+<figure class="tile">
+<img src="img/photo6.jpg" alt="Photo 6" onerror="this.style.display='none'">
+<figcaption><b>Photo 6</b>Add a short description of this piece.</figcaption>
+</figure>
+</div>
 
 <footer>Built by Kyle Kavon &middot; BMIS 235</footer>
 
