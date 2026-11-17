@@ -74,3 +74,11 @@ p a {
 p a:hover {
   color: #c8102e;
 }
+
+/* red line under every page heading */
+h1 {
+  max-width: 600px;
+  margin: 30px auto;
+  padding-bottom: 10px;
+  border-bottom: 4px solid #c8102e;
+}
