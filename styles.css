@@ -319,6 +319,44 @@ transform: translateY(0);
 }
 }
 
+/* ===== CONTACT LINKS =================================================== */
+
+.socials {
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(min(100%, 290px), 1fr));
+gap: 16px;
+max-width: 1000px;
+margin: 20px auto 0 auto;
+}
+
+/* a whole card can be a link */
+a.card {
+display: block;
+text-decoration: none;
+color: inherit;
+}
+
+.card .handle {
+display: block;
+font-family: "Bebas Neue", Impact, sans-serif;
+font-size: 32px;
+letter-spacing: 1px;
+color: #ecebe6;
+text-decoration: none;
+margin-top: 8px;
+overflow-wrap: anywhere;
+transition: color 0.2s;
+}
+
+.card .handle.small {
+font-size: 23px;
+}
+
+a.card:hover .handle,
+.card a.handle:hover {
+color: #ff6b2c;
+}
+
 /* ===== MY 3 STYLES ===================================================== */
 
 /* 1. menu buttons lift up when you hover */
