@@ -57,3 +57,11 @@ font-size: 14px;
 color: #777777;
 margin-top: 40px;
 }
+
+/* menu buttons lift up when you hover */
+nav img {
+  transition: transform 0.2s;
+}
+nav img:hover {
+  transform: translateY(-3px) scale(1.05);
+}
